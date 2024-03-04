@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
+    <!-- FAVICON -->
     <link
       rel="icon"
       type="image/png"
@@ -12,36 +13,66 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <link rel="stylesheet" href="./css/output.css">
+    <!-- IMAGES -->
+    <link rel="preload" href="./assets/images/illustration-article.svg" as="image">
+    <link rel="preload" href="./assets/images/image-avatar.webp" as="image">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="./css/output.css" />
 
     <title>Frontend Mentor | Blog preview card</title>
   </head>
 
-  <body class="bg-yellow h-screen flex flex-col items-center justify-center font-primary p-4">
-    <main class="mx-auto bg-white max-w-96 p-5 rounded-2xl ring-1 ring-black space-y-4">
-      <div class="[background-image:url('../assets/images/illustration-article.svg')] bg-cover bg-no-repeat h-[201px] w-full rounded-xl"></div>
-      <div class="">
-        <p class="bg-yellow font-extrabold">Learning</p>
-        <p class="font-medium">Published 21 Dec 2023</p>
+  <body
+    class="bg-yellow h-screen flex gap-4 flex-col items-center font-primary p-6"
+  >
+    <main
+      class="transition ease-in-out delay-150 motion-safe:transition container mx-auto my-auto bg-white max-w-96 p-6 rounded-2xl ring-1 ring-black gap-4 shadow-[8px_8px] hover:shadow-[14px_14px] shadow-black flex flex-col items-start"
+    >
+      <div
+        class="[background-image:url('../assets/images/illustration-article.svg')] bg-cover bg-center bg-no-repeat h-[201px] w-full rounded-xl"
+      ></div>
+
+      <div class="space-y-3">
+        <p class="bg-yellow font-extrabold w-fit px-3 py-1 rounded-sm text-label">
+          Learning
+        </p>
+        <p class="font-medium text-paragraph1">Published 21 Dec 2023</p>
       </div>
-      <div class="space-y-2">
-        <h1 class="font-extrabold">HTML & CSS foundations</h1>
-        <p class="text-grey">
+
+      <div class="space-y-5">
+        <h1
+          class="font-extrabold text-heading1 hover:text-yellow cursor-pointer w-fit"
+        >
+          HTML & CSS foundations
+        </h1>
+        <p class="text-grey text-paragraph1">
           These languages are the backbone of every website, defining structure,
           content, and presentation.
         </p>
       </div>
-      <div class="flex">
-        <img src="./assets/images/image-avatar.webp" alt="" />
-        <p>Greg Hooper</p>
+
+      <div class="flex gap-3 items-center">
+        <img
+          class="aspect-square size-8"
+          src="./assets/images/image-avatar.webp"
+          alt=""
+        />
+        <p class="font-extrabold text-paragraph1">Greg Hooper</p>
       </div>
     </main>
 
-    <footer class="attribution">
+    <footer class="text-center text-black font-extrabold text-paragraph1">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a
+        class="bg-white hover:bg-black hover:text-white"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by
+      <a class="bg-white hover:bg-black hover:text-white" href=""
+        >Fejiro Abere</a
+      >.
     </footer>
   </body>
 </html>
